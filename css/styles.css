@@ -16,7 +16,7 @@ p {
 
 img {
     display: block;
-    height:0 auto;
+    height: 0 auto;
     max-width: 100%;
 }
 
@@ -24,7 +24,7 @@ ul,
 ol {
     list-style-type: none;
     margin-top: auto;
-    padding:0 auto;
+    padding: 0 auto;
 }
 
 a {
@@ -68,21 +68,20 @@ body {
 /* =============== Header Styles =============== */
 .header {
     border-bottom: 1px solid #e7e9fc;
-    padding: 24px 0;
-    background-color: #ffffff;
 }
 
 .header-container {
     display: flex;
     max-width: 1158px;
     justify-content: space-between;
-    align-items: center;
+   align-items: center;
     margin: 0px auto;
     padding: 0 15px;
+    height: 72px;
 }
 
 .header-nav {
-    font-family: "roboto" ,serif;
+    font-family: "roboto", serif;
     font-weight: 700;
     font-size: 36px;
     letter-spacing: 2em;
@@ -103,6 +102,11 @@ body {
     margin-right: 76px;
     margin-bottom: 24px;
     padding: 24px 0;
+}
+
+.plan-logo {
+    fill: #404bbf stroke: #434455;
+
 }
 
 .logo-2 {
@@ -132,24 +136,42 @@ body {
 }
 
 .header-list {
+    display: inline-flex;
     padding: 24px 0;
     color: #2e2f42;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.current {
+    color: #404bbf;
+}
+
+.current::after {
+    content: "";
+    position: absolute;
+    background-color: #404bbf;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
 }
 
 .header-list:hover {
     color: #404bbf;
 }
 
-.header-list:active {
+.header-list:focus {
     color: #404bbf;
 }
 
-.header-list:focus {
-    color: #404bbf;
+.header-list:active {
+    color: #4D5AE5;
 }
 
 .header-ddress {
@@ -194,8 +216,15 @@ body {
 
 /* =============== Title Styles =============== */
 .title {
+    display: flex;
     padding: 188px 0;
     background-color: #2e2f42;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/team/people-office.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 600px;
 }
 
 .title-container {
@@ -205,6 +234,9 @@ body {
 }
 
 .title-name {
+    display: flex;
+    font-family: "Roboto", serif;
+    margin: 0 auto 48px;
     max-width: 496px;
     font-weight: 700;
     font-size: 56px;
@@ -212,7 +244,6 @@ body {
     letter-spacing: 0.02em;
     text-align: center;
     color: #ffffff;
-    margin-top: 188px;
 }
 
 .button {
@@ -228,6 +259,7 @@ body {
     margin-top: 68px;
     margin-bottom: 168px;
     font-weight: 500;
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
 }
 
@@ -265,7 +297,6 @@ body {
     height: 104px;
     flex-basis: calc((100% - 3 * 24px) / 4);
 }
-
 .plan-title {
     display: block;
     margin-bottom: 8px;
@@ -275,7 +306,6 @@ body {
     letter-spacing: 0.02em;
     color: #2e2f42;
 }
-
 .text-plan {
     display: block;
     margin-bottom: 8px;
@@ -285,7 +315,11 @@ body {
     letter-spacing: 0.02em;
     color: #434455;
 }
+.icon-svg {
+    fill: #4D5AE5;
+    stroke: #2e2f42;
 
+}
 /* === section team === */
 .team {
     padding: 120px 0;
@@ -425,6 +459,12 @@ body {
     color: #2e2f42;
 }
 
+.foto-card:hover .iten-card-text {
+    transform: translateY(0%);
+    background-color: #404bbf;
+    color: #ffffff
+}
+
 .card-text {
     display: flex;
     font-weight: 400;
@@ -434,6 +474,32 @@ body {
     color: #434455;
     margin-top: 8px;
     margin-bottom: 32px;
+}
+
+.items-card-list {
+    position: relative;
+    overflow: hidden;
+}
+
+.iten-card-text {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    padding-top: 40px;
+    padding-bottom: 164px;
+    padding-left: 32px;
+    padding-right: 32px;
+    font-weight: 400;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    font-family: "Roboto", serif;
+    background-color: #404bbf;
 }
 
 /* === section Footer === */
