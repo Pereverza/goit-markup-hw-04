@@ -353,7 +353,7 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   background: #ffffff;
   border-radius: 0px 0px 4px 4px;
-  flex-basis: calc( (100% - 3 * 24px) / 4);
+  flex-basis: calc( (100% - 3 * 24px) / 4 );
   background-color: #FFFFFF;
 }
 .person {
@@ -363,7 +363,6 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   flex-direction: column;
   background: #ffffff;
 border-radius: 0 0 4px 4px;
-padding: 32px 0;
 }
 .titel-items {
   display: block;
@@ -383,10 +382,13 @@ padding: 32px 0;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  padding-bottom: 8px;
 }
 .icon-menu-team {
   display: flex;
   justify-content: center;
+  align-items: center;
+flex-direction: row;
   gap: 24px;
 }
 .social-icon-list {
@@ -436,11 +438,16 @@ padding: 32px 0;
 }
 .items-portfolio {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 48px;
 }
 .foto-card {
+   position: relative;
+    width: calc((100% - 48px) /3 );
+    border-bottom:1px solid #e7e9fc ;
+    background-color: #fff;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .foto-card:hover {
